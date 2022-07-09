@@ -5,7 +5,8 @@
 
 #!/bin/bash
 
-export $(grep -v '^#' /home/pi/.gh_token | xargs -0)
+export
+$(grep -v '^#' /home/pi/.gh_token | xargs -0)
 
 #####################################################################
 ### Please set the paths accordingly. In case you don't have all  ###
@@ -75,7 +76,7 @@ push_config(){
   git add . -v
   current_date=$(date +"%Y-%m-%d %T")
   git commit -m "Backup triggered on $current_date" -m "$m1" -m "$m2" -m "$m3" -m "$m4"
-  git push "https://chopdi:$GH_TOKEN@github.com:chopdi/VzBot-235-AWD-HV.git" 
+  git push "https://chopdi:$GH_TOKEN@github.com/chopdi/Voron-2.4-Config.git"  
 }
 
 
